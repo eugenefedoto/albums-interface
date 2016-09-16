@@ -5,12 +5,9 @@ function dragstart_handler(ev) {
 function drop_handler(ev) {
     ev.preventDefault();
     var id = ev.dataTransfer.getData("text");
-    //console.log(ev.target);
-    //ev.currentTarget.appendChild(document.getElementById(data));
     var userId = $('#' + ev.currentTarget.id).attr('userid');
     var base = 'http://jsonplaceholder.typicode.com';
     var route = '/albums/' + id;
-    //console.log($('#' + id + ' span:last-child').text());
     var title = $('#' + id + ' span:last-child').text();
     $.ajax({
         url: base + route,
@@ -21,7 +18,6 @@ function drop_handler(ev) {
             title: title
         }
     }).done(function(data) {
-    	console.log(data);
     	$('#' + id).remove()
         $('#col' + data.userId).append(
                     '<div id=' + data.id + ' class="row" draggable="true" ondragstart="dragstart_handler(event)";><span style="display: inline-block; width: 50px;">' + data.id + '</span><span>' + data.title + '</span></div>');
@@ -40,8 +36,6 @@ $(function() {
             $('#col' + data.id + ' .name').append(data.name);
         });
     }
-
-
 
     function getAlbum(userId) {
         var base = 'http://jsonplaceholder.typicode.com';

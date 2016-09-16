@@ -95,76 +95,6 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-body {
-    margin:0;
-    padding:0;
-}
-#header h1,
-#header h2,
-#header p {
-    margin-left:2%;
-    padding-right:2%;
-}
-#active2 #tab2,
-#active3 #tab3,
-#active4 #tab4,
-#active5 #tab5 {
-    font-weight:bold;
-    text-decoration:none;
-    color:#000;
-}
-#footer {
-    clear:both;
-    float:left;
-    width:100%;
-}
-#footer p {
-    margin-left:2%;
-    padding-right:2%;
-}
-
-/* Start of Column CSS */
-#container2 {
-    clear:left;
-    float:left;
-    width:100%;
-    overflow:hidden;
-    background:#ffa7a7; /* column 2 background colour */
-}
-#container1 {
-    float:left;
-    width:100%;
-    position:relative;
-    right:50%;
-    background:#fff689; /* column 1 background colour */
-}
-#col1 {
-    float:left;
-    width:46%;
-    position:relative;
-    left:52%;
-    overflow:hidden;
-}
-#col2 {
-    float:left;
-    width:46%;
-    position:relative;
-    left:56%;
-    overflow:hidden;
-}
-.row {
-    height: 35px;
-}
-
-.disable_text_highlighting {
--webkit-user-select: none; /* Webkit */
--moz-user-select: none;    /* Firefox */
--ms-user-select: none;     /* IE 10  */
-/* Currently not supported in Opera but will be soon */
--o-user-select: none;
-user-select: none;
-}
-
 #col1
 {
   background-color: lightgreen;
@@ -191,7 +121,20 @@ user-select: none;
 
 
 
+.flexbox-container {
+    display: -ms-flex;
+    display: -webkit-flex;
+    display: flex;
+}
 
+.flexbox-container > div {
+    width: 50%;
+    padding: 10px;
+}
+
+.flexbox-container > div:first-child {
+    margin-right: 20px;
+}
 
 
 
@@ -364,4 +307,8 @@ user-select: none;
         page-break-after: avoid;
     }
 }
+
+
+
+
 
