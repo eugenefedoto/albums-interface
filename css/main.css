@@ -156,7 +156,7 @@ body {
     height: 35px;
 }
 
-body {
+.disable_text_highlighting {
 -webkit-user-select: none; /* Webkit */
 -moz-user-select: none;    /* Firefox */
 -ms-user-select: none;     /* IE 10  */
@@ -165,7 +165,28 @@ body {
 user-select: none;
 }
 
+#col1
+{
+  background-color: lightgreen;
+}
 
+#col1 img, #col2 img {
+  margin-top: 3px;
+  margin-left: 5px;
+}
+
+#col2
+{
+  background-color: red;
+  min-height: 120px;
+}
+.over {
+  border: solid 5px purple;
+}
+.draggable
+{
+  border: solid 2px gray;
+}
 
 
 
