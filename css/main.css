@@ -95,24 +95,66 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-#user1, #user2 {
-    width: 50%;
-    text-align: center;
-    float: left;
+body {
+    margin:0;
+    padding:0;
+}
+#header h1,
+#header h2,
+#header p {
+    margin-left:2%;
+    padding-right:2%;
+}
+#active2 #tab2,
+#active3 #tab3,
+#active4 #tab4,
+#active5 #tab5 {
+    font-weight:bold;
+    text-decoration:none;
+    color:#000;
+}
+#footer {
+    clear:both;
+    float:left;
+    width:100%;
+}
+#footer p {
+    margin-left:2%;
+    padding-right:2%;
 }
 
-.albumId {
-    width: 10%;
-    float: left;
+/* Start of Column CSS */
+#container2 {
+    clear:left;
+    float:left;
+    width:100%;
+    overflow:hidden;
+    background:#ffa7a7; /* column 2 background colour */
 }
-
-.albumTitle {
-    width: 40%;
-    float: left;
+#container1 {
+    float:left;
+    width:100%;
+    position:relative;
+    right:50%;
+    background:#fff689; /* column 1 background colour */
 }
-
-
-
+#col1 {
+    float:left;
+    width:46%;
+    position:relative;
+    left:52%;
+    overflow:hidden;
+}
+#col2 {
+    float:left;
+    width:46%;
+    position:relative;
+    left:56%;
+    overflow:hidden;
+}
+.row {
+    height: 35px;
+}
 
 
 

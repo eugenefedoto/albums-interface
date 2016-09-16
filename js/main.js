@@ -6,7 +6,7 @@ var getUser = function(id) {
         url: base + route,
         method: 'GET',
     }).done(function(data) {
-        $('#user' + id + ' h1').append(data.name);
+        $('#col' + data.id + ' .name').append(data.name);
     });
 }
 
@@ -19,8 +19,8 @@ var getAlbum = function(id) {
         method: 'GET',
     }).done(function(data) {
         data.forEach(function(element) {
-            $('#user' + id + ' header').append('<div>' + '<span class="albumId">' 
-            	+ element.id + '</span>' + '<span class="albumTitle">' + element.title + '</span>' + '</div>');
+            $('#col' + element.userId).append(
+            	'<div class="row"><span style="display: inline-block; width: 50px;">' + element.id + '</span><span q>' + element.title + '</span></div>');
         })
     });
 }
