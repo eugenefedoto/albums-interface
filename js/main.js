@@ -1,34 +1,28 @@
-var fullName, firstName, lastName;
-var title;
+var getUser = function(id) {
+    var base = 'http://jsonplaceholder.typicode.com';
+    var route = '/users/' + id;
+    var type = 'user';
+
+    getJson(base, route, type);
+};
+
+var getAlbum = function(id, callback) {
+    var base = 'http://jsonplaceholder.typicode.com';
+    var route = '/albums?userId=' + id;
+
+    getJson(base, route);
+};
 
 var getUser = function(id) {
     var base = 'http://jsonplaceholder.typicode.com';
     var route = '/users/' + id;
 
-    $.ajax({
+    return $.ajax({
         url: base + route,
         method: 'GET',
-    }).done(function(user) {
-        fullName = user.name;
-        firstName = fullName.split(" ")[0];
-        lastName = fullName.split(" ")[1];
-        //console.log("NAME: " + firstName + " " + lastName);
+    }).done(function(data) {
+        $('#user' + id + ' h1').append(data.name);
     });
-};
+}
 
-var getAlbum = function(id) {
-    var base = 'http://jsonplaceholder.typicode.com';
-    var route = '/albums?userId=' + id;
-
-    $.ajax({
-        url: base + route,
-        method: 'GET',
-    }).done(function(album) {
-        title = album.title;
-    });
-};
-
-
-getUser(1);
-console.log("NAME: " + firstName + " " + lastName);
-
+$.when(getUser(1)).then(getUser(2));
