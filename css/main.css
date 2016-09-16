@@ -95,8 +95,21 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+#user1, #user2 {
+    width: 50%;
+    text-align: center;
+    float: left;
+}
 
+.albumId {
+    width: 10%;
+    float: left;
+}
 
+.albumTitle {
+    width: 40%;
+    float: left;
+}
 
 
 
@@ -280,3 +293,4 @@ textarea {
         page-break-after: avoid;
     }
 }
+
